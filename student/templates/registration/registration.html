@@ -17,3 +17,77 @@
 </form>
 
 <script type="text/javascript">document.getElementById("id_email").focus();</script>
+    oleg@ubuntu:~/projects/students$ git remote add origin git@github.com:oleggggg/student.git
+    oleg@ubuntu:~/projects/students$ git add .
+    oleg@ubuntu:~/projects/students$ git push origin master
+ERROR: Repository not found.
+fatal: The remote end hung up unexpectedly
+    oleg@ubuntu:~/projects/students$ git log
+fatal: bad default revision 'HEAD'
+    oleg@ubuntu:~/projects/students$ ls
+base.db  manage.py  student  students
+    oleg@ubuntu:~/projects/students$ cd student
+    oleg@ubuntu:~/projects/students/student$ ls
+admin.py   fixtures  forms.pyc    __init__.pyc  models.pyc  tests.py  views.pyc
+admin.pyc  forms.py  __init__.py  models.py     templates   views.py
+    oleg@ubuntu:~/projects/students/student$ cd ..
+    oleg@ubuntu:~/projects/students$ ls students
+__init__.py   settings.py   urls.py   wsgi.py
+__init__.pyc  settings.pyc  urls.pyc  wsgi.pyc
+    oleg@ubuntu:~/projects/students$ ls .git/
+branches  config  description  HEAD  hooks  index  info  objects  refs
+    oleg@ubuntu:~/projects/students$ nano .git/config 
+    oleg@ubuntu:~/projects/students$ git push -u origin master
+Warning: Permanently added the RSA host key for IP address '192.30.252.131' to the list of known hosts.
+ERROR: Repository not found.
+fatal: The remote end hung up unexpectedly
+    oleg@ubuntu:~/projects/students$ git commit -m "first commit"
+[master (root-commit) 6bb00e7] first commit
+ 26 files changed, 565 insertions(+)
+ create mode 100644 base.db
+ create mode 100644 manage.py
+ create mode 100644 student/__init__.py
+ create mode 100644 student/__init__.pyc
+ create mode 100644 student/admin.py
+ create mode 100644 student/admin.pyc
+ create mode 100644 student/fixtures/initial_data.json
+ create mode 100644 student/forms.py
+ create mode 100644 student/forms.pyc
+ create mode 100644 student/models.py
+ create mode 100644 student/models.pyc
+ create mode 100644 student/templates/base.html
+ create mode 100644 student/templates/edit_student.html
+ create mode 100644 student/templates/g_list.html
+ create mode 100644 student/templates/registration/login.html
+ create mode 100644 student/templates/registration/registration.html
+ create mode 100644 student/templates/s_list.html
+ create mode 100644 student/tests.py
+ create mode 100644 student/views.py
+ create mode 100644 student/views.pyc
+ create mode 100644 students/__init__.py
+ create mode 100644 students/__init__.pyc
+ create mode 100644 students/settings.py
+ create mode 100644 students/settings.pyc
+ create mode 100644 students/urls.py
+ create mode 100644 students/urls.pyc
+ create mode 100644 students/wsgi.py
+ create mode 100644 students/wsgi.pyc
+    oleg@ubuntu:~/projects/students$ git remote add origin https://github.com/olegggg/student.git
+fatal: remote origin already exists.
+    oleg@ubuntu:~/projects/students$ git push -u origin master
+ERROR: Repository not found.
+fatal: The remote end hung up unexpectedly
+    oleg@ubuntu:~/projects/students$ nano .git/config oleg@ubuntu:~/projects/students$ git remote add origin https://github.com/olegggg/student.git
+    oleg@ubuntu:~/projects/students$ git push -u origin masterUsername for 'https://github.com': ^X^X^C
+    oleg@ubuntu:~/projects/students$ ^C
+    oleg@ubuntu:~/projects/students$ ^C
+    oleg@ubuntu:~/projects/students$ ^C
+    oleg@ubuntu:~/projects/students$ ^C
+    oleg@ubuntu:~/projects/students$ nano .git/config oleg@ubuntu:~/projects/students$ git remote add origin git@github.com:olegggg/student.git
+    oleg@ubuntu:~/projects/students$ git push -u origin masterCounting objects: 34, done.
+Compressing objects: 100% (32/32), done.
+Writing objects: 100% (34/34), 18.21 KiB, done.
+Total 34 (delta 1), reused 0 (delta 0)
+To git@github.com:olegggg/student.git
+ * [new branch]      master -> master
+Branch master set up to track remote branch master from origin.
