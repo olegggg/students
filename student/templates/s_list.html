@@ -1,0 +1,45 @@
+{% extends "base.html" %}
+{% block context %}
+<li><a href='/login'>Login</a></li>
+<li><a href='/logout'>Logout</a></li>
+<li><a href='/registration'>Registration</a></li> 
+<h1 align = "center"> Список Студентов из группы</h1>
+<h3 align = "center"> Группа: {{ current_group }}, Стaроста {{ current_group.captain }}</h3>
+
+<table border = "0" cellspacing = "1" align = "center" class = "t_group">
+	<tr>
+		<th>&nbsp;Name</th>
+		<th>&nbsp;Otchestvo</th>
+		<th>&nbsp;Gruppa</th>
+		<th>&nbsp;Bilet</th>
+		
+	</tr>
+	
+{% if s_list %}
+	<tr >
+		{% for student in s_list %}
+			<td align = "center">
+				&nbsp;{{student.name}}
+
+			</td>
+			<td align = "center">
+				&nbsp;{{student.surname}} 
+				
+			</td>
+			<td align = "center">
+				&nbsp;{{student.Group}}
+				
+			</td><td align = "center">
+				&nbsp;{{student.ticket}}
+				
+			</td>
+			
+			
+		{% endfor %}
+	</tr>
+{% endif %}
+</table>
+
+<h3 align="center"><a href='/'>Вернуться к списку групп</a></h3> 
+
+{% endblock %}

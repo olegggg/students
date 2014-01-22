@@ -1,0 +1,8 @@
+{% extends "base.html" %}
+{% block context %}
+<h1 align = "center">Edit_Student</h1>
+<form action = "edit_student/{{student.id}}" method = "POST">{{form.as_p}}
+	<input type = "submit" value = "Save">
+</form>
+<h3 align = "center"><a href = "/group/{{}student.rel_g.id}">Return</a></h3>
+{% endblock %}
